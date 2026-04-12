@@ -106,7 +106,7 @@ export function TrackSearchPanel({ onAdd, existingIds, disabled }: Props) {
 
       {/* Results dropdown */}
       {open && (
-        <div className="absolute left-0 right-0 top-full z-50 mt-1.5 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl">
+        <div className="fixed inset-x-2 top-[54px] z-50 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl sm:absolute sm:inset-x-0 sm:top-full sm:mt-1.5">
           {/* Header */}
           <div className="flex items-center justify-between border-b border-slate-100 px-4 py-2.5">
             <p className="text-xs font-semibold text-slate-500 uppercase tracking-wide">

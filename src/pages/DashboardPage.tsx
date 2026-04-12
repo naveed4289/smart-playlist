@@ -301,7 +301,7 @@ export function DashboardPage() {
       )}
 
       {/* ════ MAIN LAYOUT ════ */}
-      <div className="flex h-full w-full overflow-hidden">
+      <div className="flex min-h-0 flex-1 w-full overflow-hidden">
 
         {/* ── LEFT: Playlist sidebar ── */}
         <aside className={`hidden w-52 shrink-0 flex-col overflow-hidden border-r border-slate-200 bg-white md:flex xl:w-56 ${mobileTab === "playlists" ? "flex" : ""}`}>

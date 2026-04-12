@@ -44,7 +44,7 @@ export function AppLayout({ children, fluid = false, searchSlot }: Props) {
         <div className="flex items-center px-4 py-2 sm:px-5">
 
           {/* Logo — same width as left sidebar */}
-          <Link to="/" className="flex w-52 shrink-0 items-center gap-2.5 xl:w-56">
+          <Link to="/" className="flex w-auto shrink-0 items-center gap-2.5 sm:w-52 xl:w-56">
             <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-indigo-600 text-white text-base font-black shadow-sm">
               ♫
             </span>
@@ -59,13 +59,13 @@ export function AppLayout({ children, fluid = false, searchSlot }: Props) {
           </div>
 
           {/* Right: user menu — same width as right sidebar */}
-          <div className="flex w-64 shrink-0 items-center justify-end gap-2 xl:w-72">
+          <div className="flex w-auto shrink-0 items-center justify-end gap-2 sm:w-64 xl:w-72">
             {user ? (
               <div ref={dropdownRef} className="relative">
                 <button
                   type="button"
                   onClick={() => setDropdownOpen((v) => !v)}
-                  className="flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 py-1.5 pl-1.5 pr-3 transition hover:border-slate-300 hover:bg-white"
+                  className="flex items-center gap-1 rounded-xl border border-slate-200 bg-slate-50 py-1.5 pl-1.5 pr-1.5 transition hover:border-slate-300 hover:bg-white sm:gap-2 sm:pr-3"
                 >
                   <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-indigo-600 text-xs font-bold text-white">
                     {initials}
@@ -79,7 +79,7 @@ export function AppLayout({ children, fluid = false, searchSlot }: Props) {
                     </span>
                   </span>
                   <svg
-                    className={`h-3 w-3 shrink-0 text-slate-400 transition-transform ${dropdownOpen ? "rotate-180" : ""}`}
+                    className={`hidden h-3 w-3 shrink-0 text-slate-400 transition-transform sm:block ${dropdownOpen ? "rotate-180" : ""}`}
                     fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
