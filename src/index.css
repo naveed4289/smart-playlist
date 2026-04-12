@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes waveBar {
+  0%   { transform: scaleY(0.25); }
+  100% { transform: scaleY(1); }
+}
+
+.wave-bar {
+  display: inline-block;
+  width: 2px;
+  border-radius: 9999px;
+  background-color: currentColor;
+  transform-origin: bottom;
+  animation: waveBar 0.6s ease-in-out infinite alternate;
+}
+.wave-bar:nth-child(1) { animation-delay: 0s;    height: 10px; }
+.wave-bar:nth-child(2) { animation-delay: 0.1s;  height: 14px; }
+.wave-bar:nth-child(3) { animation-delay: 0.2s;  height: 8px;  }
+.wave-bar:nth-child(4) { animation-delay: 0.05s; height: 16px; }
+.wave-bar:nth-child(5) { animation-delay: 0.15s; height: 10px; }
+.wave-bar:nth-child(6) { animation-delay: 0.25s; height: 13px; }
+.wave-bar.paused { animation-play-state: paused; transform: scaleY(0.3); }

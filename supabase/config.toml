@@ -1,0 +1,10 @@
+# Optional: used by Supabase CLI. Function JWT verification (default true).
+
+[functions.spotify-search]
+verify_jwt = true
+
+[functions.genius-enrich]
+verify_jwt = true
+
+[functions.suggest-track]
+verify_jwt = true
