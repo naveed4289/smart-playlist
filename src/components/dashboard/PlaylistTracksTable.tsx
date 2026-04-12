@@ -120,7 +120,7 @@ export function PlaylistTracksTable({
       </div>
 
       {/* ── Track list ── */}
-      <div className="flex-1 overflow-y-auto">
+      <div className="flex-1 overflow-y-auto pb-16 md:pb-0">
         {tracks.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-24 text-center">
             <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-50 text-3xl text-indigo-300">♫</div>

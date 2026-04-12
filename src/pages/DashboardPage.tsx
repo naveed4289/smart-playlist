@@ -362,7 +362,7 @@ export function DashboardPage() {
         </div>
 
         {/* ── RIGHT: AI Suggestions + Playlist Insights ── */}
-        <aside className={`w-full flex-col overflow-y-auto border-l border-slate-200 bg-white md:flex md:w-64 xl:w-72 ${mobileTab === "ai" ? "flex" : "hidden md:flex"}`}>
+        <aside className={`w-full flex-col overflow-y-auto border-l border-slate-200 bg-white md:flex md:w-64 xl:w-72 ${mobileTab === "ai" ? "flex" : "hidden md:flex"} pb-16 md:pb-0`}>
           {/* AI Suggestions - top */}
           <SuggestionPanel
             tracks={tracks}
@@ -378,7 +378,7 @@ export function DashboardPage() {
 
         {/* ── Mobile: Playlists panel ── */}
         {mobileTab === "playlists" && (
-          <div className="flex w-full flex-col overflow-hidden md:hidden">
+          <div className="flex w-full flex-col overflow-hidden pb-16 md:hidden">
             <PlaylistSwitcher
               playlists={playlists}
               selectedId={selectedId}
@@ -403,7 +403,7 @@ export function DashboardPage() {
       />
 
       {/* ════ MOBILE BOTTOM TAB BAR ════ */}
-      <nav className="md:hidden shrink-0 flex border-t border-slate-200 bg-white">
+      <nav className="md:hidden fixed bottom-0 inset-x-0 z-30 flex border-t border-slate-200 bg-white safe-area-pb" style={{ paddingBottom: "env(safe-area-inset-bottom)" }}>
         {(
           [
             { key: "playlists", label: "Playlists", icon: (

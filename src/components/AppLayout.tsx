@@ -37,7 +37,7 @@ export function AppLayout({ children, fluid = false, searchSlot }: Props) {
   }, []);
 
   return (
-    <div className="flex h-screen flex-col bg-slate-100 text-slate-900">
+    <div className="flex h-[100dvh] flex-col bg-slate-100 text-slate-900">
 
       {/* ── Navbar ── */}
       <header className="z-30 shrink-0 border-b border-slate-200 bg-white shadow-sm">
