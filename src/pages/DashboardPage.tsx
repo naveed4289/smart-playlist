@@ -344,7 +344,7 @@ export function DashboardPage() {
                 onPlayTrack={(t) => setNowPlayingTrack((prev) => prev?.id === t.id ? null : t)}
                 onSelectTrack={(t) => setDetailTrack(t)}
                 nowPlayingId={nowPlayingTrack?.id}
-                selectedTrackId={detailTrack?.id ?? null}
+                selectedTrackId={null}
                 onSave={() => showToast("Playlist saved! ✓")}
                 onClearAll={() => void clearPlaylist()}
                 busy={busy}
