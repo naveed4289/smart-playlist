@@ -317,7 +317,7 @@ export function DashboardPage() {
         </aside>
 
         {/* ── CENTER: Tracks / Detail + bottom player ── */}
-        <div className={`min-w-0 flex-1 flex-col overflow-hidden bg-slate-50 ${mobileTab === "tracks" ? "flex" : "hidden md:flex"}`}>
+        <div className={`min-w-0 flex-1 flex-col overflow-hidden bg-slate-50 ${nowPlayingTrack ? "pb-16 md:pb-0" : ""} ${mobileTab === "tracks" ? "flex" : "hidden md:flex"}`}>
           {/* Main content area (track list OR detail view) */}
           <div className="min-h-0 flex-1 overflow-hidden">
             {tracksQuery.isLoading ? (
